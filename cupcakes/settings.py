@@ -25,7 +25,7 @@ SECRET_KEY = 'c#mn*xa2m3e0n%lt3_n2ctyyt%mwoje_aj35%#t9)zsye)5hgx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['yummy-cupcakes.herokuapp.com']
 
 
 # Application definition
