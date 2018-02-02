@@ -1,5 +1,16 @@
-*.pyc
+## System Files
+.DS_Store
+
+
+## Node Files
+node_modules
+
+
+## Framework Files
 db.sqlite3
 myvenv
 __pycache__
 local_settings.py
+
+
+## Git Files
