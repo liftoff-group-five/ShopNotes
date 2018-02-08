@@ -3,7 +3,7 @@
 
 
 ## Node Files
-node_modules
+*/node_modules
 
 
 ## Framework Files
@@ -11,6 +11,10 @@ db.sqlite3
 venv
 __pycache__
 local_settings.py
+
+
+## Python Files
+*.pyc
 
 
 ## Git Files
