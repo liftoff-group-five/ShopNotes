@@ -9,8 +9,8 @@
 	},
 	"apps": [
 		{
-			"root": "src",
-			"outDir": "dist",
+			"root": "angular",
+			"outDir": "cupcakes/static",
 			"assets": [
 				"assets",
 				"favicon.ico"
