@@ -12,11 +12,13 @@
 		"build": "ng build --prod",
 		"test": "ng test",
 		"lint": "ng lint",
-		"e2e": "ng e2e"
+		"e2e": "ng e2e",
+		"postinstall": "ng build --aot -prod"
 	},
 	"private": true,
 	"dependencies": {
 		"@angular/animations": "^5.2.0",
+		"@angular/cli": "1.6.8",
 		"@angular/common": "^5.2.0",
 		"@angular/compiler": "^5.2.0",
 		"@angular/core": "^5.2.0",
