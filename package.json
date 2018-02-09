@@ -9,16 +9,17 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
-		"build": "ng build --prod",
+		"build": "ng build",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
-		"postinstall": "ng build --aot -prod"
+		"postinstall": "ng build"
 	},
 	"private": true,
 	"dependencies": {
+		"@angular/cli": "^1.6.8",
+		"@angular/compiler-cli": "^5.2.4",
 		"@angular/animations": "^5.2.0",
-		"@angular/cli": "1.6.8",
 		"@angular/common": "^5.2.0",
 		"@angular/compiler": "^5.2.0",
 		"@angular/core": "^5.2.0",
@@ -32,8 +33,6 @@
 		"zone.js": "^0.8.19"
 	},
 	"devDependencies": {
-		"@angular/cli": "1.6.8",
-		"@angular/compiler-cli": "^5.2.0",
 		"@angular/language-service": "^5.2.0",
 		"@types/jasmine": "~2.8.3",
 		"@types/jasminewd2": "~2.0.2",
@@ -52,6 +51,5 @@
 		"typescript": "~2.5.3"
 	}
 }
-
 
 
