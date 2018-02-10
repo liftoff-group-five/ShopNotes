@@ -25,7 +25,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n\n\n\nsection {\n\tposition: absolute;\n\tbackground-color: #7c05ad;\n    top: 0;\n    left: 0;;\n\theight: 100%;\n\twidth: 100%;\n}\n\n#welcome {\n\tcolor: #fb76d0;\n\tmargin: 100px 0;\n}\n\ndiv {\n\tposition: absolute;\n\ttext-align: center;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    background-color: black;\n    color: white;\n    top: 30%;\n    left: 0;\n    right: 0;\n    height: 300px;\n    width: 60%;\n    min-width: 400px;\n    margin: 0 auto;\n    padding: 50px;\n}\n\n#reaction {\n\tcolor: #2e43f3;\n\tmargin: 75px 0;\n}\n\nbutton {\t\n\tposition: absolute;\n    background-color: red;\n    border: 0;\n\tfont-size: 20pt;\n\tfont-weight: bolder;\n    left: 0;\n    right: 0;\n    bottom: 30%;\n    height: 50px;\n    width: 250px;\n    margin: 0 auto;\n}\n\n\n\n", ""]);
 
 // exports
 
@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../angular/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n\n\n<!-- The content below is only a placeholder and can be replaced -->\n\n\n\n<div style=\"text-align:center\">\n\t<h1> {{ welcome }}! </h1>\n\t<img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2> Here are some links to help you start: </h2>\n<ul>\n\t<li>\n\t\t<h2>\n\t\t\t<a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\"> Tour of Heroes </a>\n\t\t</h2>\n\t</li>\n\t<li>\n\t\t<h2>\n\t\t\t<a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\"> CLI Documentation </a>\n\t\t</h2>\n\t</li>\n\t<li>\n\t\t<h2>\n\t\t\t<a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\"> Angular blog </a>\n\t\t</h2>\n\t</li>\n</ul>\n\n<!-- Api call to grab, map, and display data from Django -->\n<h3> {{ api.name }} </h3>\n<button (click)=\"findDjango( )\"> DO THE THING </button>\n<h1> {{ api.reaction }} </h1>\n\n\n"
+module.exports = "\n\n\n\n<!-- The content below is only a placeholder and can be replaced -->\n\n\n\n<!-- Placeholder app landing page to show api call to backend -->\n<section>\n\t<h1 id=\"welcome\"> {{ welcome }}! </h1>\n\t<div>\n\t\t<!-- Display the results of the api call -->\n\t\t<h2> {{ api.name }} </h2>\n\t\t<h1 id=\"reaction\"> {{ api.reaction }} </h1>\n\t</div>\n\t<!-- Api call to grab, map, and display data from Django -->\n\t<button (click)=\"findDjango( )\"> DO THE THING </button>\n</section>\n\n\n"
 
 /***/ }),
 
