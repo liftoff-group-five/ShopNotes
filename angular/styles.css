@@ -4,6 +4,7 @@
 
 body {
 	font-family: Tahoma;
+	padding: 0 0 100px;
 	margin: 0;
 }
 
@@ -18,8 +19,21 @@ h2 {
 	margin: 0;
 }
 
+h3 {
+	font-size: 20pt;
+}
+
+ul {
+	list-style-type: none;
+}
+
+input {
+	outline: none;
+}
+
 button {
 	outline: none;
 }
+
 
 

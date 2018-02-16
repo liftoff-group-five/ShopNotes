@@ -4,8 +4,16 @@
 
 <form>
 	<h3> Patron Login </h3>
-	<input name="email" type="text">
-	<input name="password" type="text">
+	<ul>
+		<label>
+			<li class="field"> Email </li>
+			<li><input name="email" type="email"></li>
+		</label>
+		<label>
+			<li class="field"> Password </li>
+			<li><input name="password" type="password"></li>
+		</label>
+	</ul>
 	<!-- <button [routerLink]="[ 'patron' ]"></button> -->
 </form>
 <button (click)="login( 'patron' )"> Login </button>
@@ -13,8 +21,16 @@
 
 <form>
 	<h3> Business Login </h3>
-	<input name="name" type="text">
-	<input name="password" type="text">
+	<ul>
+		<label>
+			<li class="field"> Shop </li>
+			<li><input name="name" type="text"></li>
+		</label>
+		<label>
+			<li class="field"> Password </li>
+			<li><input name="password" type="password"></li>
+		</label>
+	</ul>
 	<!-- <button [routerLink]="[ 'business' ]"></button> -->
 </form>
 <button (click)="login( 'business' )"> Login </button>

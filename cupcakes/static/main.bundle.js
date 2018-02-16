@@ -414,7 +414,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n\n\n\nform {\n\tposition: relative;\n\twidth: 750px;\n\tmargin: 75px auto 0;\n}\n\nh3 {\n\ttext-align: center;\n}\n\nlabel {\n\tdisplay: block;\n\tmargin: 0 0 25px;\n}\n\n.field {\n\tfont-size: 14pt;\n\twidth: 25%;\n}\n\nli {\n\tdisplay: inline-block;\n\twidth: 72%;\n}\n\ninput {\n\tfont-size: 12pt;\n\theight: 40px;\n\twidth: 100%;\n\tpadding: 0 5px;\n}\n\nbutton {\n\tposition: relative;\n\tdisplay: block;\n\tfont-size: 14pt;\n\theight: 40px;\n    width: 160px;\n\tmargin: 0 auto 50px;\n}\n\n\n\n", ""]);
 
 // exports
 
@@ -427,7 +427,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../angular/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n\n\n<form>\n\t<h3> Patron Login </h3>\n\t<input name=\"email\" type=\"text\">\n\t<input name=\"password\" type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'patron' ]\"></button> -->\n</form>\n<button (click)=\"login( 'patron' )\"> Login </button>\n\n\n<form>\n\t<h3> Business Login </h3>\n\t<input name=\"name\" type=\"text\">\n\t<input name=\"password\" type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'business' ]\"></button> -->\n</form>\n<button (click)=\"login( 'business' )\"> Login </button>\n\n\n\n"
+module.exports = "\n\n\n\n<form>\n\t<h3> Patron Login </h3>\n\t<ul>\n\t\t<label>\n\t\t\t<li class=\"field\"> Email </li>\n\t\t\t<li><input name=\"email\" type=\"email\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Password </li>\n\t\t\t<li><input name=\"password\" type=\"password\"></li>\n\t\t</label>\n\t</ul>\n\t<!-- <button [routerLink]=\"[ 'patron' ]\"></button> -->\n</form>\n<button (click)=\"login( 'patron' )\"> Login </button>\n\n\n<form>\n\t<h3> Business Login </h3>\n\t<ul>\n\t\t<label>\n\t\t\t<li class=\"field\"> Shop </li>\n\t\t\t<li><input name=\"name\" type=\"text\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Password </li>\n\t\t\t<li><input name=\"password\" type=\"password\"></li>\n\t\t</label>\n\t</ul>\n\t<!-- <button [routerLink]=\"[ 'business' ]\"></button> -->\n</form>\n<button (click)=\"login( 'business' )\"> Login </button>\n\n\n\n"
 
 /***/ }),
 
@@ -613,7 +613,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n\n\n\nform {\n\tposition: relative;\n\twidth: 750px;\n\tmargin: 75px auto 0;\n}\n\nh3 {\n\ttext-align: center;\n}\n\nlabel {\n\tdisplay: block;\n\tmargin: 0 0 25px;\n}\n\n.field {\n\tfont-size: 14pt;\n\twidth: 25%;\n}\n\nli {\n\tdisplay: inline-block;\n\twidth: 72%;\n}\n\ninput {\n\tfont-size: 12pt;\n\theight: 40px;\n\twidth: 100%;\n\tpadding: 0 5px;\n}\n\nbutton {\n\tposition: relative;\n\tdisplay: block;\n\tfont-size: 14pt;\n\theight: 40px;\n    width: 160px;\n\tmargin: 0 auto 50px;\n}\n\n\n\n", ""]);
 
 // exports
 
@@ -626,7 +626,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../angular/app/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n\n\n<form>\n\t<h3> Patron Signup </h3>\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'patron' ]\"></button> -->\n</form>\n<button (click)=\"login( 'patron' )\"> Submit </button>\n\n\n<form>\n\t<h3> Business Signup </h3>\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'business' ]\"></button> -->\n</form>\n<button (click)=\"login( 'business' )\"> Submit </button>\n\n\n\n"
+module.exports = "\n\n\n\n<form>\n\t<h3> Patron Signup </h3>\n\t<ul>\n\t\t<label>\n\t\t\t<li class=\"field\"> First Name </li>\n\t\t\t<li><input type=\"text\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Last Name </li>\n\t\t\t<li><input type=\"text\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Email </li>\n\t\t\t<li><input type=\"email\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Password </li>\n\t\t\t<li><input type=\"password\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Confirm Password </li>\n\t\t\t<li><input type=\"password\"></li>\n\t\t</label>\n\t</ul>\n\t<!-- <button [routerLink]=\"[ 'patron' ]\"></button> -->\n</form>\n<button (click)=\"login( 'patron' )\"> Submit </button>\n\n\n<form>\n\t<h3> Business Signup </h3>\n\t<ul>\n\t\t<label>\n\t\t\t<li class=\"field\"> Shop Name </li>\n\t\t\t<li><input type=\"text\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Shop Type </li>\n\t\t\t<li><input type=\"text\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Owner </li>\n\t\t\t<li><input type=\"text\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Address </li>\n\t\t\t<li><input type=\"text\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Email </li>\n\t\t\t<li><input type=\"email\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Password </li>\n\t\t\t<li><input type=\"password\"></li>\n\t\t</label>\n\t\t<label>\n\t\t\t<li class=\"field\"> Confirm Password </li>\n\t\t\t<li><input type=\"password\"></li>\n\t\t</label>\n\t</ul>\n\t<!-- <button [routerLink]=\"[ 'business' ]\"></button> -->\n</form>\n<button (click)=\"login( 'business' )\"> Submit </button>\n\n\n\n"
 
 /***/ }),
 

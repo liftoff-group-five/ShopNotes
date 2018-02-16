@@ -4,11 +4,28 @@
 
 <form>
 	<h3> Patron Signup </h3>
-	<input type="text">
-	<input type="text">
-	<input type="text">
-	<input type="text">
-	<input type="text">
+	<ul>
+		<label>
+			<li class="field"> First Name </li>
+			<li><input type="text"></li>
+		</label>
+		<label>
+			<li class="field"> Last Name </li>
+			<li><input type="text"></li>
+		</label>
+		<label>
+			<li class="field"> Email </li>
+			<li><input type="email"></li>
+		</label>
+		<label>
+			<li class="field"> Password </li>
+			<li><input type="password"></li>
+		</label>
+		<label>
+			<li class="field"> Confirm Password </li>
+			<li><input type="password"></li>
+		</label>
+	</ul>
 	<!-- <button [routerLink]="[ 'patron' ]"></button> -->
 </form>
 <button (click)="login( 'patron' )"> Submit </button>
@@ -16,11 +33,36 @@
 
 <form>
 	<h3> Business Signup </h3>
-	<input type="text">
-	<input type="text">
-	<input type="text">
-	<input type="text">
-	<input type="text">
+	<ul>
+		<label>
+			<li class="field"> Shop Name </li>
+			<li><input type="text"></li>
+		</label>
+		<label>
+			<li class="field"> Shop Type </li>
+			<li><input type="text"></li>
+		</label>
+		<label>
+			<li class="field"> Owner </li>
+			<li><input type="text"></li>
+		</label>
+		<label>
+			<li class="field"> Address </li>
+			<li><input type="text"></li>
+		</label>
+		<label>
+			<li class="field"> Email </li>
+			<li><input type="email"></li>
+		</label>
+		<label>
+			<li class="field"> Password </li>
+			<li><input type="password"></li>
+		</label>
+		<label>
+			<li class="field"> Confirm Password </li>
+			<li><input type="password"></li>
+		</label>
+	</ul>
 	<!-- <button [routerLink]="[ 'business' ]"></button> -->
 </form>
 <button (click)="login( 'business' )"> Submit </button>
