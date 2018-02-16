@@ -20,9 +20,9 @@ export class RegisterComponent {
 	constructor( private _url: UrlService ) {  }
 	
 	
-	// Should be replaced by an observable to track changes from UrlService in the future
-	switchLoginStatus( loggingIn: boolean) {
-		this._url.authenticate( loggingIn )
+	login( userType: string ) {
+		this._url.authenticate( true )
+		this._url.navigate( userType )
 	}
 	
 }

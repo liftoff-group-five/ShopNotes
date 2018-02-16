@@ -2,7 +2,7 @@
 
 
 
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 
 import { UrlService } from '../service/url.service'
 
@@ -15,14 +15,24 @@ import { UrlService } from '../service/url.service'
 } )
 
 
-export class NavigateComponent {
+export class NavigateComponent implements OnInit {
+	
+	private isLoggedIn: boolean = false
+	
 	
 	constructor( private _url: UrlService ) {  }
 	
 	
-	// Will be moved intp Urlservice s an observable to track changes in the future
-	switchLoginStatus( loggingIn: boolean) {
-		this._url.authenticate( loggingIn )
+	ngOnInit( ) {
+		// Setup UrlService's auth subject observable to identify login status changes
+		this._url.auth.subscribe( status => {
+			this.isLoggedIn = status
+			console.log( 'Your login status is ' + status + '!' )
+		} )
+	}
+	
+	logout( ) {
+		this._url.authenticate( false )
 	}
 	
 }

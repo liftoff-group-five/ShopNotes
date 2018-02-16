@@ -192,10 +192,10 @@ var RouteModule = /** @class */ (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forRoot(routes)
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */].forRoot(routes)
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */]
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */]
             ]
         })
     ], RouteModule);
@@ -227,7 +227,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../angular/app/business/business.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  business works!\n</p>\n"
+module.exports = "\n\n\n\n<p> Business Page </p>\n\n\n"
 
 /***/ }),
 
@@ -250,8 +250,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var BusinessComponent = /** @class */ (function () {
     function BusinessComponent() {
     }
-    BusinessComponent.prototype.ngOnInit = function () {
-    };
     BusinessComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-business',
@@ -429,7 +427,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../angular/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n\n\n<form>\n\t<h3> Patron Login </h3>\n\t<input name=\"email\" type=\"text\">\n\t<input name=\"password\" type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'patron' ]\"></button> -->\n</form>\n<button (click)=\"switchLoginStatus( true )\" [routerLink]=\"[ 'patron' ]\"></button>\n<form>\n\t<h3> Business Login </h3>\n\t<input name=\"name\" type=\"text\">\n\t<input name=\"password\" type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'business' ]\"></button> -->\n</form>\n<button (click)=\"switchLoginStatus( true )\" [routerLink]=\"[ 'business' ]\"></button>\n\n\n\n"
+module.exports = "\n\n\n\n<form>\n\t<h3> Patron Login </h3>\n\t<input name=\"email\" type=\"text\">\n\t<input name=\"password\" type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'patron' ]\"></button> -->\n</form>\n<button (click)=\"login( 'patron' )\"> Login </button>\n\n\n<form>\n\t<h3> Business Login </h3>\n\t<input name=\"name\" type=\"text\">\n\t<input name=\"password\" type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'business' ]\"></button> -->\n</form>\n<button (click)=\"login( 'business' )\"> Login </button>\n\n\n\n"
 
 /***/ }),
 
@@ -455,8 +453,9 @@ var LoginComponent = /** @class */ (function () {
     function LoginComponent(_url) {
         this._url = _url;
     }
-    LoginComponent.prototype.switchLoginStatus = function (loggingIn) {
-        this._url.authenticate(loggingIn);
+    LoginComponent.prototype.login = function (userType) {
+        this._url.authenticate(true);
+        this._url.navigate(userType);
     };
     LoginComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -494,7 +493,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../angular/app/navigate/navigate.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n\n\n<nav>\n\t<ul *ngIf=\"!isLoggedIn\">\n\t\t<li><a [routerLink]=\"[ 'login' ]\"> Login </a></li>\n\t\t<li> | </li>\n\t\t<li><a [routerLink]=\"[ 'register' ]\"> Signup </a></li>\n\t</ul>\n\t<ul *ngIf=\"isLoggedIn\">\n\t\t<li><a (click)=\"switchLoginStatus( false )\" a [routerLink]=\"[ '' ]\"> Logout </a></li>\n\t</ul>\n</nav>\n\n\n\n"
+module.exports = "\n\n\n\n<nav>\n\t<ul *ngIf=\"!isLoggedIn\">\n\t\t<li><a [routerLink]=\"[ 'login' ]\"> Login </a></li>\n\t\t<li> | </li>\n\t\t<li><a [routerLink]=\"[ 'register' ]\"> Signup </a></li>\n\t</ul>\n\t<ul *ngIf=\"isLoggedIn\">\n\t\t<li><a (click)=\"logout( )\" a [routerLink]=\"[ '' ]\"> Logout </a></li>\n\t</ul>\n</nav>\n\n\n\n"
 
 /***/ }),
 
@@ -519,9 +518,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var NavigateComponent = /** @class */ (function () {
     function NavigateComponent(_url) {
         this._url = _url;
+        this.isLoggedIn = false;
     }
-    NavigateComponent.prototype.switchLoginStatus = function (loggingIn) {
-        this._url.authenticate(loggingIn);
+    NavigateComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // Setup UrlService's auth subject observable to identify login status changes
+        this._url.auth.subscribe(function (status) {
+            _this.isLoggedIn = status;
+            console.log('Your login status is ' + status + '!');
+        });
+    };
+    NavigateComponent.prototype.logout = function () {
+        this._url.authenticate(false);
     };
     NavigateComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -559,7 +567,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../angular/app/patron/patron.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  patron works!\n</p>\n"
+module.exports = "\n\n\n\n<p> Patron Page </p>\n\n\n"
 
 /***/ }),
 
@@ -582,8 +590,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PatronComponent = /** @class */ (function () {
     function PatronComponent() {
     }
-    PatronComponent.prototype.ngOnInit = function () {
-    };
     PatronComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-patron',
@@ -620,7 +626,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../angular/app/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n\n\n<form>\n\t<h3> Patron Signup </h3>\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'patron' ]\"></button> -->\n</form>\n<button (click)=\"switchLoginStatus( true )\" [routerLink]=\"[ 'patron' ]\"></button>\n<form>\n\t<h3> Business Signup </h3>\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'business' ]\"></button> -->\n</form>\n<button (click)=\"switchLoginStatus( true )\" [routerLink]=\"[ 'business' ]\"></button>\n\n\n\n"
+module.exports = "\n\n\n\n<form>\n\t<h3> Patron Signup </h3>\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'patron' ]\"></button> -->\n</form>\n<button (click)=\"login( 'patron' )\"> Submit </button>\n\n\n<form>\n\t<h3> Business Signup </h3>\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<input type=\"text\">\n\t<!-- <button [routerLink]=\"[ 'business' ]\"></button> -->\n</form>\n<button (click)=\"login( 'business' )\"> Submit </button>\n\n\n\n"
 
 /***/ }),
 
@@ -646,8 +652,9 @@ var RegisterComponent = /** @class */ (function () {
     function RegisterComponent(_url) {
         this._url = _url;
     }
-    RegisterComponent.prototype.switchLoginStatus = function (loggingIn) {
-        this._url.authenticate(loggingIn);
+    RegisterComponent.prototype.login = function (userType) {
+        this._url.authenticate(true);
+        this._url.navigate(userType);
     };
     RegisterComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -670,6 +677,8 @@ var RegisterComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UrlService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__("../../../../rxjs/_esm5/Subject.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -680,16 +689,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var UrlService = /** @class */ (function () {
-    function UrlService() {
-        this.isLoggedIn = false;
+    function UrlService(_navigate) {
+        this._navigate = _navigate;
+        this.auth = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["a" /* Subject */];
     }
     UrlService.prototype.authenticate = function (loggingIn) {
-        this.isLoggedIn = loggingIn;
+        // Pass new boolean to alter user login status
+        this.auth.next(loggingIn);
+    };
+    UrlService.prototype.navigate = function (url) {
+        this._navigate.navigate([url]);
     };
     UrlService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]])
     ], UrlService);
     return UrlService;
 }());

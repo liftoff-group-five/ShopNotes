@@ -4,6 +4,7 @@
 
 import { Injectable } from '@angular/core'
 import { Router } from '@angular/router'
+import { Subject } from 'rxjs/Subject'
 
 
 
@@ -12,14 +13,19 @@ import { Router } from '@angular/router'
 
 export class UrlService {
 	
-	private isLoggedIn: boolean = false
+	public auth: Subject<boolean> = new Subject
 	
 
-	constructor( ) {  }
+	constructor( private _navigate: Router ) {  }
 	
 	
 	authenticate( loggingIn: boolean ) {
-		this.isLoggedIn = loggingIn
+		// Pass new boolean to alter user login status
+		this.auth.next( loggingIn )
+	}
+	
+	navigate( url: string ) {
+		this._navigate.navigate( [ url ] )
 	}
 
 }

@@ -9,7 +9,7 @@
 		<li><a [routerLink]="[ 'register' ]"> Signup </a></li>
 	</ul>
 	<ul *ngIf="isLoggedIn">
-		<li><a (click)="switchLoginStatus( false )" a [routerLink]="[ '' ]"> Logout </a></li>
+		<li><a (click)="logout( )" a [routerLink]="[ '' ]"> Logout </a></li>
 	</ul>
 </nav>
 
