@@ -2,54 +2,6 @@
 
 
 
-section {
-	position: absolute;
-	background-color: #7c05ad;
-    top: 0;
-    left: 0;;
-	height: 100%;
-	width: 100%;
-}
-
-#welcome {
-	color: #fb76d0;
-	margin: 100px 0;
-}
-
-div {
-	position: absolute;
-	text-align: center;
-    box-sizing: border-box;
-    background-color: black;
-    color: white;
-    top: 30%;
-    left: 0;
-    right: 0;
-    height: 300px;
-    width: 60%;
-    min-width: 400px;
-    margin: 0 auto;
-    padding: 50px;
-}
-
-#reaction {
-	color: #2e43f3;
-	margin: 75px 0;
-}
-
-button {	
-	position: absolute;
-    background-color: red;
-    border: 0;
-	font-size: 20pt;
-	font-weight: bolder;
-    left: 0;
-    right: 0;
-    bottom: 30%;
-    height: 50px;
-    width: 250px;
-    margin: 0 auto;
-}
 
 
 

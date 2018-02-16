@@ -1,0 +1,51 @@
+
+
+
+
+section {
+	position: absolute;
+    top: 0;
+    left: 0;;
+	height: 100%;
+	width: 100%;
+}
+
+#welcome {
+	color: #dc0f6a;
+	margin: 125px 0 0;
+}
+
+div {
+	text-align: center;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    top: 30%;
+    left: 0;
+    right: 0;
+    height: 300px;
+    width: 60%;
+    min-width: 400px;
+    margin: 40px auto 0;
+    padding: 50px;
+}
+
+#reaction {
+	color: #2e43f3;
+	margin: 60px 0;
+}
+
+button {
+    display: block;
+    background-color: red;
+    border: 0;
+	font-size: 20pt;
+	font-weight: bolder;
+    left: 0;
+    right: 0;
+    height: 60px;
+    width: 250px;
+	margin: 20px auto 0;
+}
+
+

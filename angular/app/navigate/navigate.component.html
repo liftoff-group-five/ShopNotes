@@ -1,0 +1,17 @@
+
+
+
+
+<nav>
+	<ul *ngIf="!isLoggedIn">
+		<li><a [routerLink]="[ 'login' ]"> Login </a></li>
+		<li> | </li>
+		<li><a [routerLink]="[ 'register' ]"> Signup </a></li>
+	</ul>
+	<ul *ngIf="isLoggedIn">
+		<li><a (click)="switchLoginStatus( false )" a [routerLink]="[ '' ]"> Logout </a></li>
+	</ul>
+</nav>
+
+
+

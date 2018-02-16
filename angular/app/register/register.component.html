@@ -1,0 +1,33 @@
+
+
+
+
+<!-- Routes broken for now - thinks they're subroutes of '/login' instead of '/' -->
+
+
+
+<form>
+	<h3> Patron Signup </h3>
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<!-- <button [routerLink]="[ 'patron' ]"></button> -->
+</form>
+<button (click)="switchLoginStatus( true )" [routerLink]="[ 'patron' ]"></button>
+
+
+<form>
+	<h3> Business Signup </h3>
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<!-- <button [routerLink]="[ 'business' ]"></button> -->
+</form>
+<button (click)="switchLoginStatus( true )" [routerLink]="[ 'business' ]"></button>
+
+
+

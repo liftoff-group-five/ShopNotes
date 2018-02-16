@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n\n\n\nbody {\n\tbackground-color: #ef2c4e;\n}\n\nh1 {\n\ttext-align: center;\n\tfont-size: 36pt;\n\tmargin: 0;\n}\n\nh2 {\n\tfont-size: 30pt;\n\tmargin: 0;\n}\n\nbutton {\n\toutline: none;\n}\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\nbody {\n\tfont-family: Tahoma;\n\tmargin: 0;\n}\n\nh1 {\n\ttext-align: center;\n\tfont-size: 30pt;\n\tmargin: 0;\n}\n\nh2 {\n\tfont-size: 24pt;\n\tmargin: 0;\n}\n\nbutton {\n\toutline: none;\n}\n\n\n", ""]);
 
 // exports
 

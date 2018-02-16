@@ -3,23 +3,23 @@
 
 
 body {
-	background-color: #ef2c4e;
+	font-family: Tahoma;
+	margin: 0;
 }
 
 h1 {
 	text-align: center;
-	font-size: 36pt;
+	font-size: 30pt;
 	margin: 0;
 }
 
 h2 {
-	font-size: 30pt;
+	font-size: 24pt;
 	margin: 0;
 }
 
 button {
 	outline: none;
 }
-
 
 

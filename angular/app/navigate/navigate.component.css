@@ -1,0 +1,35 @@
+
+
+
+
+nav {
+	position: sticky;
+	z-index: 50;
+	background: black;
+	color: white;
+	top: 0;
+	height: 75px;
+	width: 100%;
+}
+
+ul {
+	position: absolute;
+	font-size: 16pt;
+	text-transform: uppercase;
+	top: 30%;
+	right: 40px;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+
+
