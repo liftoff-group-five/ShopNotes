@@ -2,6 +2,8 @@
 
 ## A Seattle LiftOff: All-in\<Tech> Production
 
+### This app's development has been suspended indefinitely.
+
 ### Development by the team of [pottery123](https://github.com/pottery123), [Xoadra](https://github.com/Xoadra), and [ctam91](https://github.com/ctam91).
 
 #### Project name: TBD
