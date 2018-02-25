@@ -2,7 +2,7 @@
 
 ## A Seattle LiftOff: All-in\<Tech> Production
 
-### This app's development has been suspended indefinitely.
+### This app's development is temporarily suspended while ownership is being transferred.
 
 ### Development by the team of [pottery123](https://github.com/pottery123), [Xoadra](https://github.com/Xoadra), and [ctam91](https://github.com/ctam91).
 
